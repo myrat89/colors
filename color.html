@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>цвета</title>
+	<style>
+		div{
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			border:1px solid #000;
+			margin-left: 50px;
+		}
+		button{
+			background: blue;
+			color: #fff;
+			vertical-align: top;
+			position: relative;
+			top:3px;
+			padding: 14px 10px;
+			cursor: pointer;
+			transition: all 0.75s;
+		}
+		.color_box{
+			background: blue;
+			transition: background 0.75s;
+		}
+		.box_color{
+			width: 400px;
+			height: 250px;
+			border:1px solid #333;
+			display: block;
+			margin-top: 10px;
+		}
+		.b_color{
+			width:70px;
+			height: 50px;
+			display: inline-block;
+			margin: 0px 2px;
+			position: relative;
+			top:5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+		<div class="box_color">
+			<div class="b_color" style="background-color: red;"></div>
+			<div class="b_color" style="background-color: gray;"></div>
+			<div class="b_color" style="background-color: yellow;"></div>
+			<div class="b_color" style="background-color: green;"></div>
+			<div class="b_color" style="background-color: pink;"></div>
+			<div class="b_color" style="background-color: blue;"></div>
+			<div class="b_color" style="background-color: purple;"></div>
+			<div class="b_color" style="background-color: orange;"></div>
+			<p></p>
+		</div>
+	
+
+
+	<script>
+		const end_color = document.getElementsByTagName("div")[0]; 
+		const box_color = document.getElementsByClassName("b_color"); 
+		const text_color = document.getElementsByTagName("p")[0];
+			for (let i = 0; i < box_color.length; i++) {
+				box_color[i].addEventListener("click", function() {
+					end_color.style.backgroundColor = this.style.backgroundColor;
+					text_color.style.color = this.style.backgroundColor;
+						if (this.style.backgroundColor === "red") {
+							text_color.innerHTML = "Красный";
+						}
+						if (this.style.backgroundColor === "gray") {
+							text_color.innerHTML = "Серый";
+						}
+						if (this.style.backgroundColor === "yellow") {
+							text_color.innerHTML = "Желтый";
+						}
+						if (this.style.backgroundColor === "pink") {
+							text_color.innerHTML = "Розовый";
+						}
+						if (this.style.backgroundColor === "blue") {
+							text_color.innerHTML = "Синий";
+						}
+						if (this.style.backgroundColor === "purple") {
+							text_color.innerHTML = "Фиолетовый";
+						}
+						if (this.style.backgroundColor === "green") {
+							text_color.innerHTML = "Зеленый";
+						}
+						if (this.style.backgroundColor === "orange") {
+							text_color.innerHTML = "Оранжевый";
+						}
+
+				});
+			}
+	</script>
+</body>
+</html>
